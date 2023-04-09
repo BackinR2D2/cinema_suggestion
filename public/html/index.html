@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Suggestion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="headerContainer">
+        <header class="header">Cinema Suggestion</header>
+    </div>
+    <div class="formContainer">
+        <form class="suggestionForm" action="/api/get-suggestions" method="post">
+
+            <h5 class="mb-3">Choose what type of media you'd like to receive</h5>
+            <div class="mb-3 mediaTypes">
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="tv_movie">
+                    <label class="form-check-label">
+                      TV Movie
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="feature_film">
+                    <label class="form-check-label">
+                      Feature Film
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="tv_series">
+                    <label class="form-check-label">
+                      TV Series
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="tv_episode">
+                    <label class="form-check-label">
+                      TV Episode
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="tv_special">
+                    <label class="form-check-label">
+                      TV Special
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="tv_mini-series">
+                    <label class="form-check-label">
+                      TV Mini-Series
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="documentary">
+                    <label class="form-check-label">
+                      Documentary
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="video_game">
+                    <label class="form-check-label">
+                      Video Game
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="short_film">
+                    <label class="form-check-label">
+                      Short Film
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="video">
+                    <label class="form-check-label">
+                      Video
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="tv_short">
+                    <label class="form-check-label">
+                      TV Short
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="podcast_series">
+                    <label class="form-check-label">
+                      Podcast Series
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="podcast_episode">
+                    <label class="form-check-label">
+                      Podcast Episode
+                    </label>
+                </div>
+                <div class="mediaTypeCheck">
+                    <input class="form-check-input" type="checkbox" value="music_video">
+                    <label class="form-check-label">
+                      Music Video
+                    </label>
+                </div>
+            </div>
+
+            <br>
+            <h5 class="mb-3 mt-3">Choose the genres of the media you'd like to receive</h5>
+            <div class="mb-3 genres"></div>
+
+            <br>
+            <h5 class="mb-3 mt-3">Choose the release date of the media you'd like to receive</h5>
+            <div class="release_date">
+                <input type="number" min="1900" step="1" id="releaseDateInput" placeholder="Release Date" />
+            </div>
+
+            <br>
+            <div class="submitButtonContainer">
+                <button type="submit" class="btn btn-light">Get Suggestions</button>
+            </div>
+        </form>
+
+        <div class="modal" tabindex="-1" id="emailModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="emailInput" placeholder="example@gmail.com">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="sendEmailBtn">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

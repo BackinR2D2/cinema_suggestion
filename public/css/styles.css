@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D8D5D4;
+    font-family: monospace, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headerContainer {
+    text-align: center;
+    margin: 2vh;
+}
+
+.header {
+    font-size: 32px;
+    font-weight: 100;
+}
+
+.mediaTypes, .genres {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.formContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 2em auto;
+    border: 1px solid #9C9181;
+    padding: 2em;
+    border-radius: 12px;
+    background-color: #DBD8D1;
+}
+
+#releaseDateInput {
+    width: 16em;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.submitButtonContainer {
+    margin: 2em 1em 0 1em;
+    text-align: center;
+}
+
+button[type="submit"] {
+    width: 100%;
+    font-size: 18px;
+}
+
+.suggestionElement {
+    display: flex;
+    align-items: center;
+    gap: 2.4em;
+    margin: 2em;
+}
+
+img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.btnContainer {
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .suggestionElement {
+        flex-direction: column;
+        border-bottom: 1px solid #9C9181;
+        border-radius: 8px;
+    }
+
+    .btnContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+@media (min-width: 600px) {
+    .mediaTypes, .genres { grid-template-columns: repeat(2, 1fr); }
+}
+  
+@media (min-width: 900px) {
+    .mediaTypes, .genres { grid-template-columns: repeat(3, 1fr); }
+}
