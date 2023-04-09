@@ -14,10 +14,15 @@ app.use('/api', suggestions);
 app.use('/api', sendMail);
 
 app.use('*', (req, res, next) => {
-	res.status(404).json({
-		status: 0,
-		message: 'Route Not Found',
-	});
+	if (req.originalUrl === '/') {
+		return res.redirect(301, '/html/index.html');
+	} else {
+		const fullURL = req.protocol + '://' + req.get('host') + req.originalUrl;
+		res.status(404).json({
+			status: 0,
+			message: `Not found ${fullURL}`,
+		});
+	}
 });
 
 app.listen(PORT, () => {
