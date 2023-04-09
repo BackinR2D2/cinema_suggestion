@@ -8,6 +8,7 @@ async function sendMailController(req, res, next) {
 			message: mail.message,
 		});
 	} catch (error) {
+		console.log(error);
 		res.status(error.statusCode || 500).json({
 			status: 0,
 			message: 'Some error occured, try again later.',
