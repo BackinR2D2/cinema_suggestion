@@ -8,7 +8,6 @@ async function suggestionsController(req, res) {
 			suggestionsList,
 		});
 	} catch (error) {
-		console.log(error);
 		res.status(error.statusCode || 500).json({
 			status: 0,
 			message: 'Some error occured, try again later.',

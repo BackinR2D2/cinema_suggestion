@@ -69,8 +69,8 @@ async function scrapeData(options) {
 					.attr('href');
 			}
 
-			elementPoster = elementPoster.replaceAll('67', '360');
-			elementPoster = elementPoster.replaceAll('98', '0');
+			elementPoster = elementPoster.replace(/67/g, '360');
+			elementPoster = elementPoster.replace(/98/g, '0');
 
 			const extractedData = {
 				elementTitle,
