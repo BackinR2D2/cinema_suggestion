@@ -82,7 +82,7 @@ const shuffledTempList = (list) => {
 };
 
 const restart = () => {
-	window.location.reload();
+	window.location.href = '/html/index.html';
 };
 
 const validateEmail = (email) => {
@@ -199,8 +199,8 @@ const callShuffledTempList = () => {
 		const btnSection = document.createElement('div');
 		btnSection.innerHTML = `
 			<div class="btnContainer">
-				<button type="button" class="btn btn-primary restartBtn" onclick="restart()">Search Again</button>
 				<button type="button" class="btn btn-success shuffleBtn" onclick="callShuffledTempList()">Shuffle</button>
+				<button type="button" class="btn btn-primary restartBtn" onclick="restart()">Search Again</button>
 			</div>
 		`;
 		suggestionDiv.append(btnSection);
@@ -370,8 +370,8 @@ const displaySuggestionList = (list, options) => {
 		const btnSection = document.createElement('div');
 		btnSection.innerHTML = `
 			<div class="btnContainer">
-				<button type="button" class="btn btn-primary restartBtn" onclick="restart()">Search Again</button>
 				<button type="button" class="btn btn-success shuffleBtn" onclick="callShuffledTempList()">Shuffle</button>
+				<button type="button" class="btn btn-primary restartBtn" onclick="restart()">Search Again</button>
 			</div>
 		`;
 		suggestionDiv.append(btnSection);
